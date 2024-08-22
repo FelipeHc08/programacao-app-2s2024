@@ -1,76 +1,108 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
-:root {
-  --primary-color: rgb(17, 86, 102);
-  --primary-color-darker: rgb(9, 48, 56);
-}
-
-* {
-  box-sizing: border-box;
-  outline: 0;
-}
-
+/* Estilos Gerais */
 body {
-  margin: 0;
-  padding: 0;
-  background: var(--primary-color);
-  font-family: 'Open sans', sans-serif;
-  font-size: 1.3em;
-  line-height: 1.5em;
-}
-
-.container {
-  max-width: 640px;
-  margin: 50px auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-form input, form label, form button {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-form input {
-  font-size: 24px;
-  height: 50px;
-  padding: 0 20px;
-}
-
-form input:focus {
-  outline: 1px solid var(--primary-color);
-}
-
-form button {
-  border: none;
-  background: var(--primary-color);
-  color: #fff;
-  font-size: 18px;
-  font-weight: 700;
-  height: 50px;
-  cursor: pointer;
-  margin-top: 30px;
-}
-
-form button:hover {
-  background: var(--primary-color-darker);
-}
-
-.paragrafo-resultado, .bad{
-  background: rgb(109, 255, 182);
-  padding: 10px 20px;
-}
-.bad{
-  background: rgb(255, 150, 150);
-}
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-top: 20px; /* Espaçamento entre a tabela e o restante do conteúdo */
-}
-
-th, td {
-  padding: 10px 20px; /* Ajuste os valores conforme necessário */
-  text-align: left;
-}
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  li {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 2px solid #333;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  /* Estilos do Bilhete de Loteria */
+  #resultado {
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+    background-image: url('path_to_background_image.jpg'); /* Pode adicionar uma imagem de fundo para simular um bilhete */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  #resultado::before {
+    content: "Bilhete de Loteria";
+    display: block;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+  }
+  
+  #resultado span {
+    display: inline-block;
+    background-color: #e6e6e6;
+    color: #333;
+    padding: 12px;
+    margin: 5px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #999;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  #resultado::after {
+    font-size: 18px;
+    font-style: italic;
+    color: #444;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  

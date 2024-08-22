@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conversor de Temperatura</h1>
+        <input type="number" id="valor" placeholder="Digite o valor">
+        <select id="de">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+            <option value="rankine">Rankine</option>
+            <option value="réaumur">Réaumur</option>
+        </select>
+        <span>para</span>
+        <select id="para">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+            <option value="rankine">Rankine</option>
+            <option value="réaumur">Réaumur</option>
+        </select>
+        <button onclick="converter()">Converter</button>
+        <h3 id="resultado"></h3>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
